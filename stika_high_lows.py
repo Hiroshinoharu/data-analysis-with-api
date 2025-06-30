@@ -25,18 +25,16 @@ for row in reader:
     dates.append(current_date)
     highs.append(high)
     lows.append(low)  # Append low temperature to the list.
+
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots(figsize=(15, 9), dpi=100)  # Set the figure size and resolution.
-ax.plot(highs, c='red', alpha=0.5)  # Plot the high temperatures with a red line.
-ax.plot(lows, c='blue', alpha=0.5)  # Plot the low temperatures with a blue line.
+ax.plot(dates, highs, c='red', alpha=0.5)  # Plot the high temperatures with a red line.
+ax.plot(dates, lows, c='blue', alpha=0.5)  # Plot the low temperatures with a blue line.
 
 # Set chart title and label axes.
 ax.set_title("Daily high and low temperatures, 2021", fontsize=24)
-ax.set_xlabel("Day", fontsize=14)
+ax.set_xlabel("Date", fontsize=14)
 fig.autofmt_xdate()  # Automatically format the x-axis dates.
 ax.set_ylabel("Temperature (F)", fontsize=14)
-
-# Set the size of tick labels.
-ax.set_xlabel("Day of the Year", fontsize=14)
 
 plt.show()
