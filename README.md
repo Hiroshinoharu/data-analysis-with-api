@@ -1,26 +1,15 @@
-# 📊 Data Analysis with API
+# 📊 Data Analysis with APIs & Visualizations
 
-A hands-on learning project focused on exploring data analysis techniques using public APIs. This project demonstrates how to fetch, process, and visualize real-world data programmatically, using Python and various libraries.
+A hands-on project combining **data analysis**, **API integration**, and **data visualization** using Python. This repo includes a series of mini-projects ranging from earthquake mapping and temperature analysis to die simulations and random walks.
 
 ---
 
 ## 🎯 Project Goals
 
-- Practice making API requests and handling responses
-- Clean and structure incoming JSON or CSV data
-- Perform exploratory data analysis (EDA)
-- Generate meaningful visualizations
-- Improve understanding of real-world data workflows
-
----
-
-## 🛠️ What’s Included
-
-- 📡 API Request Scripts — for fetching data from various APIs  
-- 🧹 Data Processing Modules — for cleaning and transforming data  
-- 📈 Visualization Code — built with libraries like `matplotlib`, `seaborn`, or `plotly`  
-- 🧪 Experimental Notebook(s) — for testing and iterating on ideas  
-- 🗃️ Modular Codebase — easy to extend and adapt for new data sources
+- Practice fetching real-world data from APIs
+- Explore and visualize datasets using Python libraries
+- Gain hands-on experience with matplotlib, JSON handling, and custom classes
+- Build a modular and extensible codebase for learning and experimentation
 
 ---
 
@@ -28,77 +17,93 @@ A hands-on learning project focused on exploring data analysis techniques using 
 
 ```
 data-analysis-with-api/
-├── api_client.py            # Handles API requests and responses
-├── data_processing.py       # Cleans and structures the raw data
-├── visualizations.py        # Contains visualization functions
-├── notebooks/               # Jupyter notebooks for experimentation
-├── requirements.txt         # List of dependencies
-└── README.md
+├── apiRequests/                 # Scripts for working with web APIs (e.g. GitHub, USGS)
+├── die.py                       # Simulates rolling a die
+├── die_visual.py               # Visualizes die rolls
+├── dice_visual_d6d10.html      # HTML output of D6 vs D10 simulation
+├── random_walk.py              # RandomWalk class for 2D visualizations
+├── rw_visuals.py               # Plots random walk paths
+├── mpl_squares.py              # Simple matplotlib square visual
+├── scatter_squares.py          # Scatter plot for squares
+├── eq_explore_data.py          # Earthquake API data exploration
+├── eq_world_map.py             # Visualizes earthquakes on a world map
+├── death_valley_highs_low.py   # Temperature plotting using CSV data
+├── stika_highs.py              # Alaska temperature plotting
+├── stika_high_lows.py          # Alaska highs/lows plotting
+├── README.md                   # Project overview
+└── requirements.txt            # Python dependencies (optional)
 ```
 
 ---
 
-## 🔄 Workflow Overview
+## 🧪 Key Projects
 
-1. **Fetch Data**  
-   Use `requests` or a custom wrapper to pull data from an API.
+### 🌍 Earthquake Data Visualization
+- Pulls earthquake data from the USGS API
+- Plots magnitude and location using Plotly or matplotlib
+- Great for exploring geospatial data
 
-2. **Parse & Clean**  
-   Transform raw data into structured DataFrames.
+### 🎲 Die Simulation
+- Custom `Die` class to simulate multiple rolls
+- Plots frequency using matplotlib
+- Includes D6 and D10 comparisons in HTML format
 
-3. **Analyze**  
-   Perform descriptive statistics or EDA.
+### 🌀 Random Walks
+- Simulates 2D random movements
+- Useful for learning about probabilistic simulations
+- Plots using scatter or line charts
 
-4. **Visualize**  
-   Use charts to uncover trends and insights.
-
----
-
-## 🧠 Learning Focus
-
-This project is designed as a **learning sandbox** — ideal for anyone looking to:
-- Understand how APIs integrate into data pipelines
-- Build confidence with data wrangling in Python
-- Experiment with visualization libraries
-- Try out data storytelling with real-world data
+### 🌡️ Temperature Analysis
+- Reads CSV files of historical weather data
+- Plots high/low temperatures over time
+- Fixes included to handle date parsing and formatting
 
 ---
 
-## 🚧 Notes & Future Plans
+## 🔧 Setup Instructions
 
-- ✅ Built with modularity in mind to support ongoing expansion
-- 🧪 New APIs and use cases will be added over time
-- 📘 This README will evolve as features grow
-- 🤝 Contributions and suggestions are welcome!
-
----
-
-## 📦 Getting Started
-
-1. Clone the repository:
+1. Clone the repo:
    ```bash
    git clone https://github.com/yourusername/data-analysis-with-api.git
    cd data-analysis-with-api
    ```
 
-2. Install dependencies:
+2. (Optional) Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   ```
+
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run scripts or open Jupyter notebooks to begin exploring.
+4. Run any script with:
+   ```bash
+   python script_name.py
+   ```
 
 ---
 
-## 🔗 Resources
+## 📊 Libraries Used
 
-- [Requests Documentation](https://docs.python-requests.org/en/latest/)
-- [Pandas Documentation](https://pandas.pydata.org/)
-- [Seaborn Docs](https://seaborn.pydata.org/)
-- [Plotly](https://plotly.com/python/)
+- `requests`
+- `matplotlib`
+- `plotly`
+- `json`, `csv`, `datetime`
+- `random`
+
+---
+
+## 📌 Notes
+
+- All scripts are organized for individual testing and exploration.
+- Ideal for beginners learning Python through real-world data.
+- Can be extended with new datasets, APIs, and visualization tools.
 
 ---
 
 ## 📜 License
 
-MIT License – use, learn, and adapt freely.
+MIT License – use, share, and modify freely!
